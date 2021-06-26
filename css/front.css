@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-color: #000;
+    position: relative;
 }
 
 .header-img {
@@ -12,14 +14,32 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.header-img h1 {
-    margin-top: 20px;
-    text-align: center;
+    border-bottom: 5px solid #000;
 }
 
 .title-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.title-box h1 {
+    margin-left: 10px;
+    text-align: center;
+    font-size: 36px;
+    text-decoration-line: underline;
+}
+
+.title-box::before {
+    content: 'Be welcome to the Darkside!';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #fff;
+    letter-spacing: 2.3px;
+}
+
+.subtitle-box {
     display: block;
     position: relative;
     margin: auto 0;
@@ -30,7 +50,7 @@ body {
     font-weight: bold;
 }
 
-.title-box::before {
+.subtitle-box::before {
     content: '';
     position: absolute;
     left: 0;
@@ -39,6 +59,22 @@ body {
     width: 20px;
 
     background-color: #000;
+}
+
+.container {
+    background-color: #fff;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.back-home {
+    display: block;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: right;
+    letter-spacing: 2.3px;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 .button-check {
@@ -82,4 +118,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: 5px solid #000;
+}
+
+/* media */
+@media screen and (max-width:1765px){ 
+    .title-box::before {
+        width: 130px;
+    }
 }
